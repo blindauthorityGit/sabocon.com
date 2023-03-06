@@ -12,7 +12,7 @@ export default function Home() {
             <Head>
                 <title>Site title</title>
             </Head>
-            <ContainerVH100 hFull center klasse="bg-primaryColor">
+            <ContainerVH100 first hFull center klasse="bg-primaryColor">
                 <div className="grid grid-cols-12 container m-auto">
                     <div className="col-span-12 sm:col-span-6 flex  flex-col justify-center px-6 sm:px-0">
                         <h4 className="font-block text-3xl mb-4 sm:mb-8 tracking-wide text-white">Hey, we're</h4>
@@ -20,7 +20,7 @@ export default function Home() {
                             SABOCON
                         </h1>
                     </div>
-                    <div className="col-span-12 sm:col-span-6 order-first sm:order-2 relative h-[27rem]">
+                    <div className="col-span-12 sm:col-span-6 order-first sm:order-2 relative h-[25rem]">
                         <Image
                             // {...ImagePropsGallery(i)}
                             src={HeroIMG.src}
