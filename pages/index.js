@@ -15,12 +15,12 @@ export default function Home() {
             <ContainerVH100 first hFull center klasse="bg-primaryColor">
                 <div className="grid grid-cols-12 container m-auto">
                     <div className="col-span-12 sm:col-span-6 flex  flex-col justify-center px-6 sm:px-0">
-                        <h4 className="font-block text-3xl mb-4 sm:mb-8 tracking-wide text-white">Hey, we're</h4>
+                        <h4 className="font-block text-xl mb-4 sm:mb-8 tracking-wide text-white">Hey, we're</h4>
                         <h1 className="font-heading text-6xl sm:text-9xl font-bold tracking-wide text-white">
                             SABOCON
                         </h1>
                     </div>
-                    <div className="col-span-12 sm:col-span-6 order-first sm:order-2 relative h-[25rem]">
+                    <div className="col-span-12 sm:col-span-6 order-first sm:order-2 relative h-[23rem]">
                         <Image
                             // {...ImagePropsGallery(i)}
                             src={HeroIMG.src}
