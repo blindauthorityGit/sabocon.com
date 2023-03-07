@@ -35,8 +35,8 @@ const Menu1 = (props) => {
         const handleScroll = () => {
             if (window.scrollY > navRef.current.offsetTop) {
                 navRef.current.classList.add("fixed", "top-0");
-                ref.current.classList.remove("hidden");
-                ref.current.classList.add("scale-up-hor-left", "block");
+                // ref.current.classList.remove("hidden");
+                // ref.current.classList.add("scale-up-hor-left", "block");
             } else {
                 // navRef.current.classList.remove("fixed");
             }
@@ -269,10 +269,10 @@ const Menu1 = (props) => {
                         transform-origin: bottom left;
                     }
                 `}</style>
-                <motion.div
+                {/* <motion.div
                     ref={ref}
                     className="absolute hidden w-full h-full top-0 left-0 bg-primaryColor-50"
-                ></motion.div>
+                ></motion.div> */}
             </nav>
         </>
     );
