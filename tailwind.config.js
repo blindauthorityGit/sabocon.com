@@ -27,7 +27,7 @@ module.exports = {
             },
             colors: {
                 blackText: {
-                    DEFAULT: "#1B1B1C",
+                    DEFAULT: "#231F26",
                     50: "#757579",
                     100: "#6B6B6F",
                     200: "#57575A",
@@ -53,6 +53,7 @@ module.exports = {
                     800: "#792C02",
                     900: "#421801",
                 },
+                lightGrey: "#F7F7F7",
                 lightPrimary: "#E6E4DD",
                 greenColor: "#6DC593",
                 redColor: "#FB5012",

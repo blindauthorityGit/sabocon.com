@@ -30,23 +30,43 @@ const Menu1 = (props) => {
         target: ref,
         offset: ["start start", "end end"],
     });
-
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > navRef.current.offsetTop) {
-                navRef.current.classList.add("fixed", "top-0");
-                // ref.current.classList.remove("hidden");
-                // ref.current.classList.add("scale-up-hor-left", "block");
-            } else {
-                // navRef.current.classList.remove("fixed");
+            const navbar = document.querySelector(".navbar");
+            const logo = document.querySelector(".logo");
+            const backgroundColor = window.getComputedStyle(navbar).getPropertyValue("background-color");
+            const logoBackgroundColor = window.getComputedStyle(logo).getPropertyValue("background-color");
+            console.log(logoBackgroundColor);
+            if (backgroundColor === "rgb(255, 255, 255)" && logoBackgroundColor === "rgb(0, 0, 0)") {
+                setLogoColor("white");
+            } else if (backgroundColor !== "rgb(255, 255, 255)" && logoBackgroundColor === "rgb(255, 255, 255)") {
+                setLogoColor("black");
             }
         };
 
         window.addEventListener("scroll", handleScroll);
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY > navRef.current.offsetTop) {
+    //             navRef.current.classList.add("fixed", "top-0");
+    //             // ref.current.classList.remove("hidden");
+    //             // ref.current.classList.add("scale-up-hor-left", "block");
+    //         } else {
+    //             // navRef.current.classList.remove("fixed");
+    //         }
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     useEffect(() => {
         // Listen for changes in the route
@@ -153,7 +173,7 @@ const Menu1 = (props) => {
                 className="h-16 fixed top-0 left-0 right-0 origin-[0%] bg-white z-40"
                 style={{ scaleX: scrollYProgress }}
             /> */}
-            <nav ref={navRef} className={`w-full fixed z-30 px-4 sm:px-12 lg:py-4  ${props.colspan}`}>
+            <nav ref={navRef} className={`w-full navbar fixed z-30 px-4 sm:px-12 lg:py-4  ${props.colspan}`}>
                 {/* BG */}
                 <div className=" z-30 grid relative grid-cols-12 m-auto items-center  py-3 sm:py-4 lg:px-0 lg:py-0">
                     {/* Background Image */}
@@ -162,7 +182,7 @@ const Menu1 = (props) => {
                             <a className="flex">
                                 <img
                                     src={props.logo}
-                                    className="max-h-[1.75rem] sm:max-h-[2.75rem] fill-current-[#fff]"
+                                    className="logo max-h-[1.75rem] sm:max-h-[2.75rem] fill-current-[#fff]"
                                     alt="Logo"
                                 />
                             </a>

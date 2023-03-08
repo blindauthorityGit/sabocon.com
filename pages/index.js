@@ -10,7 +10,9 @@ import { Card1 } from "../components/cards";
 import HeroIMG from "../assets/heroFull.jpg";
 import Dots from "../components/svg";
 import Icon1 from "../assets/icon1.png";
-import Hero3 from "../assets/hero3.png";
+import Icon2 from "../assets/icon2.png";
+import Icon3 from "../assets/icon3.png";
+import About from "../assets/about.png";
 
 // Parallax
 import { useParallax } from "react-scroll-parallax";
@@ -24,7 +26,6 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
 export default function Home() {
     const { ref } = useParallax({
-        speed: 10,
         translateY: [-50, 50],
         translateX: [-60, 50],
     });
@@ -34,6 +35,9 @@ export default function Home() {
     const controls = useAnimation();
 
     const floatRef = useRef();
+
+    const cats = ["creative technology", "graphic design", "branding agency"];
+    const icons = [Icon1.src, Icon2.src, Icon3.src];
 
     useEffect(() => {
         console.log(ref.current);
@@ -121,27 +125,34 @@ export default function Home() {
                     </AnimatePresence>
 
                     <motion.div
-                        ref={ref}
                         initial="hidden"
                         animate={controls}
                         variants={{
-                            visible: { opacity: 1, x: 0, transition: { delay: 0.8, duration: 1.5, ease: "easeOut" } },
-                            hidden: { opacity: 0, x: "50vw" },
+                            visible: {
+                                opacity: 1,
+                                x: 0,
+                                y: 0,
+                                transition: { delay: 0.8, duration: 1.5, ease: "easeOut" },
+                            },
+                            hidden: { opacity: 0, x: "50vw", y: "1rem" },
                         }}
-                        className="col-span-12 sm:col-span-8 order-first sm:order-2 relative h-[400px] xl:h-[820px]"
+                        className="col-span-12  sm:col-span-8 order-first sm:order-2 relative "
                     >
-                        <Image
-                            // {...ImagePropsGallery(i)}
-                            src={HeroIMG.src}
-                            layout="fill"
-                            width={600}
-                            height={600}
-                            loading="lazy"
-                            objectFit="cover"
-                            alt="hero"
-                            className={`${typedOut ? "block" : "opacity-0"}`}
-                            onLoad={() => parallaxController.update()}
-                        />
+                        <div ref={ref} className="relative h-[400px] xl:h-[820px]">
+                            <Image
+                                // {...ImagePropsGallery(i)}
+
+                                src={HeroIMG.src}
+                                layout="fill"
+                                width={600}
+                                height={600}
+                                loading="lazy"
+                                objectFit="cover"
+                                alt="hero"
+                                className={`${typedOut ? "block" : "opacity-0"}`}
+                                onLoad={() => parallaxController.update()}
+                            />
+                        </div>
                     </motion.div>
                 </div>
                 <FloaterContact></FloaterContact>
@@ -149,13 +160,53 @@ export default function Home() {
                     <Dots></Dots>
                 </section>
             </ContainerVH100>
-            <ContainerVH100 first hFull center klasse="bg-white">
+            <ContainerVH100 center klasse="bg-white pt-0">
+                {/* <div className="absolute top-[-2rem] z-50 left-[50%] font-headings text-6xl">a</div> */}
                 <div className="container grid grid-cols-12 mx-auto">
-                    {Array.from({ length: 3 }).map((_, index) => (
-                        <Card1 klasse="bg-[#efefef]" image={Icon1.src}>
-                            Bubu
+                    {cats.map((e, index) => (
+                        <Card1
+                            animation={index % 2 === 0 ? "slide-left" : "slide-right"}
+                            order={index % 2 === 0 ? "order-0" : "order-1"}
+                            klasse={index % 2 === 0 ? "bg-lightGrey" : "bg-primaryColor text-white"}
+                            imgKlasse={index % 2 === 0 ? "mix-blend-darken" : ""}
+                            image={icons[index]}
+                        >
+                            {e}
                         </Card1>
                     ))}
+                    <motion.h2 className="font-heading mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                        based in Frankfurt,
+                        <br /> Germany
+                    </motion.h2>
+                </div>
+            </ContainerVH100>
+            <ContainerVH100 center klasse="bg-white pt-0">
+                <div className="grid grid-cols-12 container m-auto px-6">
+                    <div className="col-span-12 md:col-span-6">
+                        <motion.h2 className="font-heading hidden sm:block mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                            How we see ourselves
+                        </motion.h2>
+                        <p className="font-block leading-relaxed">
+                            We’re a team of designers, technologists, musicians and futurists.
+                            <br /> <br /> Rooted in narrative and built on collaboration. We partner with modern brands
+                            and individuals by developing holistic solutions through strategy, design and direction. We
+                            specialize in digital products, applications, designing visual identities, websites, motion
+                            graphics, events, promotions and interactive installations for a wide range of clients.
+                        </p>
+                    </div>
+                    <div className="col-span-12 md:col-span-6 mb-8 p-12 relative h-[300px] order-first md:order-last">
+                        <Image
+                            // {...ImagePropsGallery(i)}
+
+                            src={About.src}
+                            layout="fill"
+                            loading="lazy"
+                            objectFit="cover"
+                            alt="hero"
+                            className={``}
+                            onLoad={() => parallaxController.update()}
+                        />
+                    </div>
                 </div>
             </ContainerVH100>
         </>
