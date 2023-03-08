@@ -12,9 +12,12 @@ const Card1 = (props) => {
     return (
         <div
             data-aos={props.animation}
-            className={`col-span-12 md:col-span-4 grid grid-cols-12 items-center p-6 ${props.klasse}`}
+            className={`col-span-12 md:col-span-4 grid grid-cols-12 items-center p-6 md:p-12 ${props.klasse}`}
         >
-            <div data-aos-delay="1000" className={`relative h-36 col-span-6 ${props.order}`}>
+            <div
+                data-aos-delay="1000"
+                className={`relative h-36 md:h-[400px] col-span-6 md:col-span-12 ${props.order}`}
+            >
                 <Image
                     // {...ImagePropsGallery(i)}
                     src={props.image}
@@ -29,7 +32,9 @@ const Card1 = (props) => {
                     data-aos-delay="400"
                 />
             </div>
-            <h3 className="font-block text-2xl col-span-6">{props.children}</h3>
+            <h3 className="font-block text-2xl col-span-6 md:col-span-12 md:text-center pt-8 md:pb-4">
+                {props.children}
+            </h3>
         </div>
     );
 };

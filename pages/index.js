@@ -166,7 +166,7 @@ export default function Home() {
                     {cats.map((e, index) => (
                         <Card1
                             animation={index % 2 === 0 ? "slide-left" : "slide-right"}
-                            order={index % 2 === 0 ? "order-0" : "order-1"}
+                            order={index % 2 === 0 ? "order-0 md:order-0" : "order-1 md:order-0"}
                             klasse={index % 2 === 0 ? "bg-lightGrey" : "bg-primaryColor text-white"}
                             imgKlasse={index % 2 === 0 ? "mix-blend-darken" : ""}
                             image={icons[index]}
@@ -174,7 +174,7 @@ export default function Home() {
                             {e}
                         </Card1>
                     ))}
-                    <motion.h2 className="font-heading mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                    <motion.h2 className="font-heading mt-6 md:mt-16 text-3xl text-center col-span-12 sm:text-6xl font-bold tracking-wide ">
                         based in Frankfurt,
                         <br /> Germany
                     </motion.h2>
@@ -206,6 +206,24 @@ export default function Home() {
                             className={``}
                             onLoad={() => parallaxController.update()}
                         />
+                    </div>
+                </div>
+            </ContainerVH100>
+            <ContainerVH100 center klasse="bg-white pt-0">
+                <div className="grid grid-cols-12 container m-auto px-6">
+                    <div className="col-span-12 md:col-span-12">
+                        <motion.h2 className="font-heading mb-8 mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                            Who we worked for
+                        </motion.h2>
+                        <p className="font-block leading-relaxed">
+                            Coca-Cola, Nike, Apple, Amazon, Procter & Gamble, Microsoft, BMW, Mercedes-Benz, Toyota,
+                            McDonald's, PepsiCo, Samsung, Google, Facebook, Instagram, Twitter, Airbnb, Uber, Netflix,
+                            Honda, Audi, Volkswagen, Ford, General Motors, Johnson & Johnson, Unilever, Nestlé, Pepsi,
+                            Adidas, Reebok, Under Armour, Gucci, Louis Vuitton, Prada, Chanel, Burberry, L'Oréal, Estée
+                            Lauder, Sephora, H&M, Zara, Forever 21, Gap, Old Navy, Levi's, Calvin Klein, Tommy Hilfiger,
+                            Ralph Lauren, Tiffany & Co., Rolex, Cartier, Visa, Mastercard, American Express, JPMorgan
+                            Chase, Goldman Sachs, Morgan Stanley, Deutsche Bank, Citigroup
+                        </p>
                     </div>
                 </div>
             </ContainerVH100>
