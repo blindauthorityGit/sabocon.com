@@ -108,17 +108,17 @@ const Mobile1 = (props) => {
                         </motion.h2>
                         <div className="flex items-center space-x-6 sm:space-x-8 mt-8 sm:mt-16">
                             <FaPhoneAlt className="text-primaryColor text-xl " />
-                            <span className="text-sm sm:text-xl font-block">0049 / 6103-9849-37</span>
+                            <span className="text-xs sm:text-xl font-block">0049 / 6103-9849-37</span>
                         </div>
 
                         <div className="flex items-center space-x-6 sm:space-x-8 mt-4">
                             <FaEnvelope className="text-primaryColor text-xl " />
-                            <span className="text-sm sm:text-xl font-block">contact[at]sabocon.com</span>
+                            <span className="text-xs sm:text-xl font-block">contact[at]sabocon.com</span>
                         </div>
 
                         <div className="flex space-x-6 sm:space-x-8 mt-8">
                             <FaMapMarkerAlt className="text-primaryColor text-xl " />
-                            <span className="text-sm sm:text-xl  font-block">
+                            <span className="text-xs sm:text-xl  font-block">
                                 <strong>Sabocon GmbH </strong> <br /> Alte Bogengasse 25 <br /> 63303 Dreieich <br />{" "}
                                 Germany
                             </span>
