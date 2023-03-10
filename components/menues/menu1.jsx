@@ -182,7 +182,7 @@ const Menu1 = (props) => {
                             <a className="flex">
                                 <img
                                     src={props.logo}
-                                    className="logo max-h-[1.75rem] sm:max-h-[2.75rem] fill-current-[#fff]"
+                                    className="logo max-h-[2.75rem] sm:max-h-[3.75rem] fill-current-[#fff]"
                                     alt="Logo"
                                 />
                             </a>
@@ -239,9 +239,9 @@ const Menu1 = (props) => {
                                 );
                             })}
                         </ul>
-                        <ul className="block md:flex lg:hidden lg:flex items-center list-style-none justify-end pr-12">
+                        {/* <ul className="block md:flex lg:hidden lg:flex items-center list-style-none justify-end pr-12">
                             <Newsletter onClick={props.onClick}></Newsletter>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div className="col-span-1 social media flex justify-end text-xl md:text-4xl">
                         <div
@@ -255,7 +255,12 @@ const Menu1 = (props) => {
                         <div className="hidden lg:flex ">
                             {props.socialMedia.map((e, i) => {
                                 return (
-                                    <a className="mr-4" key={`smKey${i}`} href={e.link} alt={e.title}>
+                                    <a
+                                        className="mr-4 text-primaryColor-100"
+                                        key={`smKey${i}`}
+                                        href={e.link}
+                                        alt={e.title}
+                                    >
                                         {e.icon}
                                     </a>
                                 );

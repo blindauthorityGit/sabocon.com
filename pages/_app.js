@@ -5,13 +5,13 @@ import { Menu1 } from "../components/menues";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TbGridDots } from "react-icons/tb";
 import { menuItems, socialMedia } from "../components/menues/config";
-import Logo from "../assets/logoFin.svg";
+import Logo from "../assets/logoFinNeu.svg";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
     return (
         <ParallaxProvider>
-            <Menu1 logo={Logo.src} menuItems={menuItems} socialMedia={socialMedia} burgerIcon={<TbGridDots />}></Menu1>
+            <Menu1 logo={Logo.src} menuItems={[]} socialMedia={socialMedia} burgerIcon={<TbGridDots />}></Menu1>
             <MobileBar1
                 onClick={() => {
                     console.log("IS CLICKED");

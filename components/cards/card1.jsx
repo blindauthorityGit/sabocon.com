@@ -32,7 +32,7 @@ const Card1 = (props) => {
                     data-aos-delay="400"
                 />
             </div>
-            <h3 className="font-block text-2xl col-span-6 md:col-span-12 md:text-center pt-8 md:pb-4">
+            <h3 className="font-block text-lg md:text-2xl col-span-6 md:col-span-12 md:text-center md:pt-8 md:pb-4">
                 {props.children}
             </h3>
         </div>

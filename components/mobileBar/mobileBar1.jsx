@@ -4,21 +4,22 @@ const MobileBar = () => {
     return (
         <div className="fixed sm:hidden  z-40 bottom-0 w-full flex justify-center items-center bg-blackText text-sm ">
             <a
-                href="tel:+436509444150"
+                href="tel:+496103984937
+                "
                 className="w-1/3 p-4 border-r border-primaryColor-200 border-opacity-30 flex flex-col justify-center items-center text-primaryColor-200 hover:text-gray-800"
             >
                 <FaPhone size={18} />
                 <span className="text-xs font-base mt-1">CALL</span>
             </a>
             <a
-                href="mailto:office@atelierbuchner.at"
+                href="mailto:contact@sabocon.com"
                 className="w-1/3 p-4 flex border-r border-opacity-30 border-primaryColor-200 flex-col justify-center items-center text-primaryColor-200 hover:text-gray-800"
             >
                 <FaEnvelope size={18} />
                 <span className="text-xs font-base mt-1">EMAIL</span>
             </a>
             <a
-                href="https://wa.link/iwtvkn"
+                href="https://wa.link/20vabk"
                 className="w-1/3 p-4 flex flex-col justify-center items-center text-primaryColor hover:text-green-600"
             >
                 <FaWhatsapp size={18} />

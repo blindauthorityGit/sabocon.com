@@ -2,9 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import Logo from "../../assets/logoFin.svg";
+import Logo from "../../assets/logoFinNeu.svg";
 import { GrClose } from "react-icons/gr";
 import { useRouter } from "next/router";
+
+// Framer Motion
+
+// ICONS
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Mobile1 = (props) => {
     const [showMenu, setShowMenu] = useState(props.showMenu);
@@ -84,7 +89,7 @@ const Mobile1 = (props) => {
             <motion.nav
                 variants={boxMotion}
                 className={`navbar slide-in-right ${props.klasse} 
-                w-[90%] right-0 h-screen bg-primaryColor-100 fixed z-50 top-0 `}
+                w-[90%] right-0 h-screen bg-white fixed z-50 top-0  `}
             >
                 <div onClick={props.onClick} className="closer absolute  rounded-full p-1 right-6 top-3">
                     <GrClose className=""></GrClose>
@@ -97,63 +102,40 @@ const Mobile1 = (props) => {
                             </a>
                         </Link>
                     </div>
-                    <div className="MenuItems text-sm sm:text-4xl pt-4 font-oswald ">
-                        <motion.ul variants={boxMotion} className="">
-                            <motion.li variants={textMotion} className="mb-4">
-                                <div className="wrap dropdown text-primaryColor-900  ">
-                                    <a className="text-text block my-3 subNav relative hover:text-primaryColor cursor-pointer">
-                                        Kurse{" "}
-                                    </a>
-                                    <hr />
-                                    <ul className="pl-8 mt-4 mb-4 text-primaryColor-900">
-                                        <Link href="/about">
-                                            <li className="mb-3">Winterakademie</li>
-                                        </Link>
-                                        <Link href="/sammlungen">
-                                            <li className="mb-3">Frühlingsakademie</li>
-                                        </Link>
-                                        <Link
-                                            href="https://atelierbuchner.at/piz1000/Museumsleitbild.pdf"
-                                            target="_blank"
-                                        >
-                                            <li className="mb-3">Sommerakademie</li>
-                                        </Link>
-                                        <Link href="/kontakt">
-                                            <li className="mb-3">Herbstakadmie</li>
-                                        </Link>
-                                    </ul>
-                                    <hr />
-                                    <Link href="./besuch">
-                                        <a className="text-text block my-3 subNav relative mt-4 hover:text-primaryColor cursor-pointer">
-                                            Galerie
-                                        </a>
-                                    </Link>
-                                </div>
-                            </motion.li>
-                            <li className="mr-8 hover:text-primaryColor hover:underline mb-4 text-primaryColor-900">
-                                <Link href="/events">
-                                    <a>News</a>
-                                </Link>
-                            </li>
-                            <li className="text-primaryColor-900">
-                                <Link href="/kontakt ">
-                                    <a>Kontakt</a>
-                                </Link>
-                            </li>
-                        </motion.ul>
+                    <div className="MenuItems text-sm sm:text-4xl pt-4 font-block ">
+                        <motion.h2 className="font-heading mb-8 mt-6 text-3xl uppercase col-span-12 sm:text-6xl font-bold tracking-wide ">
+                            Let's <span className="text-primaryColor">create</span> something together
+                        </motion.h2>
+                        <div className="flex items-center space-x-6 sm:space-x-8 mt-8 sm:mt-16">
+                            <FaPhoneAlt className="text-primaryColor text-xl " />
+                            <span className="text-sm sm:text-xl font-block">0049 / 6103-9849-37</span>
+                        </div>
+
+                        <div className="flex items-center space-x-6 sm:space-x-8 mt-4">
+                            <FaEnvelope className="text-primaryColor text-xl " />
+                            <span className="text-sm sm:text-xl font-block">contact[at]sabocon.com</span>
+                        </div>
+
+                        <div className="flex space-x-6 sm:space-x-8 mt-8">
+                            <FaMapMarkerAlt className="text-primaryColor text-xl " />
+                            <span className="text-sm sm:text-xl  font-block">
+                                <strong>Sabocon GmbH </strong> <br /> Alte Bogengasse 25 <br /> 63303 Dreieich <br />{" "}
+                                Germany
+                            </span>
+                        </div>
                         <hr className="mt-4" />
                         <ul className="tracking-widest text-primaryColor-900">
                             <li className="mb-3 mt-8 text-xs">
                                 <div className="wrap dropdown   ">
-                                    <Link href="/impressum">
+                                    <Link href="/imprint">
                                         <a className="text-text block my-4 subNav relative hover:text-primaryColor cursor-pointer">
-                                            Impressum
+                                            Imprint
                                         </a>
                                     </Link>
 
-                                    <Link href="/datenschutz">
+                                    <Link href="/privacy">
                                         <a className="text-text block my-4 subNav relative mt-4 hover:text-primaryColor cursor-pointer">
-                                            Datenschutzerklärung
+                                            Privacy policy
                                         </a>
                                     </Link>
                                 </div>

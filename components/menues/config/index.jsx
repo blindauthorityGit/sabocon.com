@@ -44,12 +44,12 @@ const menuItems = [
 const socialMedia = [
     {
         title: "Facebook",
-        link: "http://www.facebook.com/piz1000",
+        link: "https://www.facebook.com/SABOCONagency",
         icon: <FaFacebook></FaFacebook>,
     },
     {
         title: "Inbstagram",
-        link: "http://www.instagram.com",
+        link: "https://www.instagram.com/sabocon/",
         icon: <FaInstagram></FaInstagram>,
     },
 ];

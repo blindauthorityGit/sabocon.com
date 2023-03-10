@@ -13,7 +13,7 @@ const ContactFloater = (refer, props) => {
                 {" "}
                 <FaPhone className="text-primaryColor-700"></FaPhone>{" "}
                 <a className="pl-4" href="tel:+43 650 944 4150">
-                    +43 650 944 4150
+                    0049 / 6103-9849-37
                 </a>
             </div>
             <div className="email flex items-center">
@@ -21,7 +21,7 @@ const ContactFloater = (refer, props) => {
                 <HiOutlineMail className="text-primaryColor-700"></HiOutlineMail>{" "}
                 <a className="pl-4" href="">
                     {" "}
-                    office@atelierbuchner.at
+                    contact@sabocon.com
                 </a>
             </div>
         </div>
