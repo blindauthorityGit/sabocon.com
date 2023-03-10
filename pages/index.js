@@ -164,9 +164,9 @@ export default function Home() {
                                 width={600}
                                 height={600}
                                 loading="lazy"
-                                objectFit="cover"
+                                objectFit="contain"
                                 alt="hero"
-                                className={`${typedOut ? "block" : "opacity-0"}`}
+                                className={`${typedOut ? "block" : "opacity-0 "}`}
                                 onLoad={() => parallaxController.update()}
                             />
                         </div>
