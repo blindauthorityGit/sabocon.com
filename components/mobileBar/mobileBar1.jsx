@@ -4,7 +4,7 @@ const MobileBar = () => {
     return (
         <div className="fixed sm:hidden  z-40 bottom-0 w-full flex justify-center items-center bg-blackText text-sm ">
             <a
-                href="tel:+496103984937
+                href="tel:+491713144784
                 "
                 className="w-1/3 p-4 border-r border-primaryColor-200 border-opacity-30 flex flex-col justify-center items-center text-primaryColor-200 hover:text-gray-800"
             >
