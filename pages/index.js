@@ -74,9 +74,9 @@ export default function Home() {
                         {!typedOut && letsGo && (
                             <motion.div
                                 className="col-span-12 sm:col-span-4 flex z-20 flex-col justify-center px-6 sm:px-0"
-                                initial={{ y: isDesktop ? "45%" : "-140%", opacity: 1 }}
+                                initial={{ y: isDesktop ? "0" : "-140%", opacity: 1 }}
                                 animate={{
-                                    y: isDesktop ? "45%" : "-140%",
+                                    y: isDesktop ? "0" : "-140%",
                                     opacity: 1,
                                     transition: { duration: 1.5, ease: "easeInOut" },
                                 }}
@@ -92,7 +92,7 @@ export default function Home() {
                                             )
                                             .pauseFor(300) // pause for 200ms
                                             .typeString(
-                                                `<span class="font-block inline-block text-xl mb-2 sm:mb-8 tracking-wide text-white pl-3">we're</span>`
+                                                `<span class="font-block inline-block text-xl md:text-3xl mb-2 sm:mb-8 tracking-wide text-white pl-3">we're</span>`
                                             )
                                             .pauseFor(20) // pause for 100ms
                                             .callFunction(() => {
@@ -177,7 +177,7 @@ export default function Home() {
                     <Dots></Dots>
                 </section>
             </ContainerVH100>
-            <ContainerVH100 center klasse="bg-white pt-0 flex-col">
+            <ContainerVH100 center klasse="bg-white pt-0 flex-col md:py-16">
                 <div
                     data-aos="fade-down"
                     className="font-headings text-[#1b33363d] sm:text-6xl font-bold tracking-wide text-center sm:mb-4"
@@ -207,8 +207,8 @@ export default function Home() {
             </ContainerVH100>
             <ContainerVH100 center klasse="bg-white pt-0">
                 <div className="grid grid-cols-12 container m-auto px-6">
-                    <div className="col-span-12 md:col-span-6">
-                        <motion.h2 className="font-heading hidden sm:block mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                    <div className="col-span-12 md:col-span-6 lg:flex lg:flex-col lg:justify-center">
+                        <motion.h2 className="font-heading lg:mb-12 hidden sm:block mt-6 text-3xl text-center sm:text-left col-span-12 sm:text-6xl font-bold tracking-wide ">
                             How we see ourselves
                         </motion.h2>
                         <p className="font-block leading-relaxed">
@@ -242,10 +242,10 @@ export default function Home() {
                     </div>
                 </div>
             </ContainerVH100>
-            <ContainerVH100 center klasse="bg-white pt-0">
-                <div className="grid grid-cols-12 container m-auto px-6">
+            <ContainerVH100 center klasse="bg-white pt-0 px-8 lg:px-0 lg:mb-24">
+                <div className="grid grid-cols-12 container m-auto lg:px-48">
                     <div className="col-span-12 md:col-span-12">
-                        <motion.h2 className="font-heading mb-8 mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
+                        <motion.h2 className="font-heading sm:text-6xl mb-8 mt-6 text-3xl text-center col-span-12 sm:text-9xl font-bold tracking-wide ">
                             Who we worked for
                         </motion.h2>
                         <p className="font-block leading-relaxed">
@@ -279,7 +279,7 @@ export default function Home() {
                     className="grid grid-cols-12 container m-auto px-6 h-full relative"
                 >
                     <div className="col-span-6 h-36"></div>
-                    <div className="col-span-12 md:col-span-6 bg-white h-[100%] sm:h-[93%] rounded-t-3xl sm:rounded-b-3xl p-8 sm:p-24">
+                    <div className="col-span-12 md:col-span-6 bg-white h-[100%] sm:h-[93%] rounded-t-3xl sm:rounded-b-3xl sm:rounded-t-none p-8 sm:p-24">
                         <motion.h2 className="font-heading mb-8 mt-6 text-3xl uppercase col-span-12 sm:text-6xl font-bold tracking-wide ">
                             Let's <span className="text-primaryColor">create</span> something together
                         </motion.h2>

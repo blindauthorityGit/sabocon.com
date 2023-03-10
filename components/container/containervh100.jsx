@@ -6,7 +6,9 @@ const ContainerVH100 = (props) => {
         <div
             className={`containervh100  relative overflow-hidden ${props.center ? "items-center flex" : ""}  ${
                 props.hFull ? "h-full" : ""
-            } ${props.first ? "py-12 md:py-20 lg:py-24 h-calc-70px" : "py-8 sm:py-12 lg:py-4"}  w-full ${props.klasse}`}
+            } ${props.first ? "py-12 md:py-20 lg:py-24 h-calc-70px" : "py-8 sm:py-12 lg:py-24"}  w-full ${
+                props.klasse
+            }`}
             style={props.style}
         >
             {props.showBG ? (
