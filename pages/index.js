@@ -14,7 +14,7 @@ import Icon1 from "../assets/icon1.png";
 import Icon2 from "../assets/icon2.png";
 import Icon3 from "../assets/icon3.png";
 import About from "../assets/about.png";
-import BottomBG from "../assets/bottomBg.jpg";
+import BottomBG from "../assets/bottomBG.jpg";
 
 //functions
 import { useBreakpoints } from "../functions/useBreakPoints";
