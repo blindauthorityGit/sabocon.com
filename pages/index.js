@@ -15,6 +15,7 @@ import Icon2 from "../assets/icon2.png";
 import Icon3 from "../assets/icon3.png";
 import About from "../assets/about.png";
 import BottomBG from "../assets/bottomBG.jpg";
+import Favicon from "../public/favicon.svg";
 
 //functions
 import { useBreakpoints } from "../functions/useBreakPoints";
@@ -66,7 +67,30 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Site title</title>
+                <title>Sabocon GmbH - your agency</title>
+                <meta
+                    name="description"
+                    content={
+                        "We are a creative technology, graphic design $ international branding agency based in Frankfurt Germany"
+                    }
+                />
+
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="icon" href={Favicon.src} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.sabocon.com" />
+                {/* <meta
+                    property="og:image"
+                    content={dataSetting.seo.advancedSEO.ogImage ? urlFor(dataSetting.seo.advancedSEO.ogImage) : null}
+                />
+                <meta
+                    property="og:description"
+                    content={
+                        dataSetting.seo.advancedSEO.ogDescription ? dataSetting.seo.advancedSEO.ogDescription : null
+                    }
+                /> */}
+                <meta property="og:site_name" content="PIZSabocon GmbH - your agency" />
+                <meta property="og:locale" content="en_EN" />
             </Head>
             <ContainerVH100 first hFull center klasse="bg-primaryColor lg:min-h-screen">
                 <div className="grid grid-cols-12 container m-auto">
@@ -249,13 +273,35 @@ export default function Home() {
                             Who we worked for
                         </motion.h2>
                         <p className="font-block leading-relaxed">
-                            Coca-Cola, Nike, Apple, Amazon, Procter & Gamble, Microsoft, BMW, Mercedes-Benz, Toyota,
-                            McDonald's, PepsiCo, Samsung, Google, Facebook, Instagram, Twitter, Airbnb, Uber, Netflix,
-                            Honda, Audi, Volkswagen, Ford, General Motors, Johnson & Johnson, Unilever, Nestlé, Pepsi,
-                            Adidas, Reebok, Under Armour, Gucci, Louis Vuitton, Prada, Chanel, Burberry, L'Oréal, Estée
-                            Lauder, Sephora, H&M, Zara, Forever 21, Gap, Old Navy, Levi's, Calvin Klein, Tommy Hilfiger,
-                            Ralph Lauren, Tiffany & Co., Rolex, Cartier, Visa, Mastercard, American Express, JPMorgan
-                            Chase, Goldman Sachs, Morgan Stanley, Deutsche Bank, Citigroup
+                            alldays, danone activia, bayer, communisis, deutsche bank ag, xerox, sunny delight, cws,
+                            adidas, pampers europe, lacoste, tide, deutscher gewerkschaftsbund, reckitt benckiser,
+                            deutsche post ag, oral b, airwick, ebay, fun factory, pampers deutschland, braun, caparol,
+                            goldwell, roma, fliegl, lomex media, baumhaus, goliath toys, procter&gamble, herisson vert,
+                            hugo boss, max factor, actonel, swiffer, valentine, laura biagiotti, 4c, connecta ag,
+                            globus, mattel, blendamed, giorgio beverly hills, braun, douglas, ellen betrix, zdf, abb
+                            robotics, baldessarini parfume, hilscher north america, sk comepact disc, sony music, cives
+                            in hagen, milupa, wella, fisher price, nacht der löwen, dronco ag, celine dion perfumes,
+                            gucci, sony, always, beiersdorf, schwarzkopf, punica, deutsches filmmuseum frankfurt, sony
+                            playstation, epos media, pringles, hayner burgfest, willi bogner parfumes, dachser, artikon,
+                            metro, wash&go, connex film, smavicon, woolworth, music supervising, margaret astor, real,
+                            charmin, coty, tempo, freibank, leo burnett, hugo woman, behrendt design, messe berlin,
+                            link, swiffer, ea games, nfc21, airfy, clearasil, fairy, werbe weischer, lenor, wal mart,
+                            bounty, ariel, kingstreet media, dm, mpo, auto sportivo, topware games, luebbe, kandoo,
+                            goliath games, cdagents, printtechnologics, calyx records, mme, mr proper, nnp, nürnberg
+                            gummi, just4kids, truck center hauser, stadt dreieich, cda media city leipzig, das modular,
+                            cinram, clairol, herbal essences, sk-cd, jumbo games, tempo kids, just entertainment,
+                            wohnton, toom, ministerium music, communisis, verbal arts, emmo biz records, largo land,
+                            ariel, kompuphonik records, oil of olaz, bagtap, thag’s agent, palan musicverlag,
+                            bestangels, boss elements, sony broadcast, nestle xpress, baxxbeat music, herver leger
+                            parfume, head&shoulders, lenor downy, dr. john, inception records, bridge entertainment,
+                            hca, dogtap, secret, citi bank, macutex, dreieich museum, behrendtdesign, plastic frog
+                            records, mccann erickson, wash&go, edeka, gewerbeverein dreieich, vivace music, vidioten,
+                            bauer und guse, minimal, pan dacom, schlecker, fresenius, idea, bag tap, dash, fiebig,
+                            kilian druck, hayner weihnacht, dr. lantzsch, gillette, freibank, pantene, profilwerkstatt,
+                            moodpack, stadtnetz dreieich, sabocon free wifi, pleasure park, mareike totzek coach, pro
+                            pilots, königskinder music, geschichts- und heimatverein dreieichenhain, ingineurbüro
+                            rossbach, magformers, nfc21, ffpa, samsung, gilette, arti-group, duracell, gts trade and
+                            services, baumhaus, bickmann werbeideen, …
                         </p>
                     </div>
                 </div>
