@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/berrychristmas", "destination": "https://example.com/new-page" },
+      { "source": "/anotherpath", "destination": "https://example.com/another-page" }
+    ]
+  }
+  
