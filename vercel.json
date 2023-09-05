@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/berrychristmas", "destination": "https://spark.adobe.com/page/gtMOc0Olrvnf3/" },
+      { "source": "/beery_christmas", "destination": "https://spark.adobe.com/page/gtMOc0Olrvnf3/" },
       { "source": "/anotherpath", "destination": "https://example.com/another-page" }
     ]
   }
