@@ -3,7 +3,7 @@ module.exports = (req, res) => {
 
     if (path === "/berrychristmas") {
         res.writeHead(302, {
-            Location: "https://example.com/new-page",
+            Location: "https://spark.adobe.com/page/gtMOc0Olrvnf3/",
         });
         res.end();
     } else {
