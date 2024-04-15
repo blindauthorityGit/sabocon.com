@@ -1,6 +1,13 @@
 {
     "rewrites": [
       { "source": "/beery_christmas", "destination": "https://spark.adobe.com/page/gtMOc0Olrvnf3/" },
+      { "source": "/ident", "destination": "https://spark.adobe.com/page/xjUwvGiNLRQCo/" },
+      { "source": "/product_guard", "destination": "https://spark.adobe.com/page/W3c3sRWRPIH8p/" },
+      { "source": "/nfc_city_guide", "destination": "https://spark.adobe.com/page/141Q8/" },
+      { "source": "/garment_control", "destination": "https://spark.adobe.com/page/6PdIZmx3HLBEx/" },
+      { "source": "/dynamic_poster", "destination": "https://spark.adobe.com/page/X5Gb1C03jCHZT/" },
+      { "source": "/dynamic_video", "destination": "https://spark.adobe.com/page/98yVwzt0n1Fig/" },
+      { "source": "/verification", "destination": "https://spark.adobe.com/page/1zz9a5F0l3lhT/" },
       { "source": "/anotherpath", "destination": "https://example.com/another-page" }
     ]
   }
