@@ -1,6 +1,4 @@
 import React, { useEffect, forwardRef } from "react";
-import { FaPhone } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
 
 const FloaterTop = (ref, props) => {
     useEffect(() => {}, []);

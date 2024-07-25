@@ -17,6 +17,8 @@ import About from "../assets/about.png";
 import BottomBG from "../assets/bottomBG.jpg";
 import Favicon from "../public/favicon.svg";
 
+import client from "../client";
+
 //functions
 import { useBreakpoints } from "../functions/useBreakPoints";
 
@@ -33,7 +35,7 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 // ICONS
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-export default function Home() {
+export default function Home({ dataStart }) {
     const { ref } = useParallax({
         translateY: [-50, 50],
         translateX: [-60, 50],
@@ -52,6 +54,8 @@ export default function Home() {
     const icons = [Icon1.src, Icon2.src, Icon3.src];
 
     useEffect(() => {
+        console.log(dataStart);
+
         setTimeout(() => {
             console.log(isMobile, isTablet, isDesktop);
             setLetsGo(true);
@@ -273,7 +277,8 @@ export default function Home() {
                             Who we worked for
                         </motion.h2>
                         <p className="font-block leading-relaxed">
-                            alldays, danone activia, bayer, communisis, deutsche bank ag, xerox, sunny delight, cws,
+                            {dataStart.clientList}
+                            {/* alldays, danone activia, bayer, communisis, deutsche bank ag, xerox, sunny delight, cws,
                             adidas, pampers europe, lacoste, tide, deutscher gewerkschaftsbund, reckitt benckiser,
                             deutsche post ag, oral b, airwick, ebay, fun factory, pampers deutschland, braun, caparol,
                             goldwell, roma, fliegl, lomex media, baumhaus, goliath toys, procter&gamble, herisson vert,
@@ -301,7 +306,7 @@ export default function Home() {
                             moodpack, stadtnetz dreieich, sabocon free wifi, pleasure park, mareike totzek coach, pro
                             pilots, königskinder music, geschichts- und heimatverein dreieichenhain, ingineurbüro
                             rossbach, magformers, nfc21, ffpa, samsung, gilette, arti-group, duracell, gts trade and
-                            services, baumhaus, bickmann werbeideen, …
+                            services, baumhaus, bickmann werbeideen, … */}
                         </p>
                     </div>
                 </div>
@@ -361,3 +366,15 @@ export default function Home() {
         </>
     );
 }
+
+export const getStaticProps = async (context) => {
+    const resStart = await client.fetch(`*[_type in ["clients"]]`);
+    const dataStart = await resStart[0];
+
+    return {
+        props: {
+            dataStart,
+        },
+        revalidate: 1, // 10 seconds
+    };
+};
