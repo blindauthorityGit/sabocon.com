@@ -18,8 +18,6 @@ import BottomBG from "../assets/bottomBG.jpg";
 import Favicon from "../public/favicon.svg";
 import client from "../client";
 
-import client from "../client";
-
 //functions
 import { useBreakpoints } from "../functions/useBreakPoints";
 
