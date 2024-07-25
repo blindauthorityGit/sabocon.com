@@ -269,7 +269,7 @@ const Menu1 = (props) => {
                     </div>
                     {/* <div className="relative top-[1000%] w-full h-24 bg-red-500" ref={ref}></div> */}
                 </div>
-                <style jsx>{`
+                <style>{`
                     .hover-underline-animation {
                         display: inline-block;
                         position: relative;

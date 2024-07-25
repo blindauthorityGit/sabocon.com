@@ -2,11 +2,9 @@ import React, { useEffect, forwardRef } from "react";
 import { FaPhone } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
-const ContactFloater = (refer, props) => {
-    useEffect(() => {}, []);
+const ContactFloater = (props) => {
     return (
         <div
-            refer={refer}
             className={`floater hidden font-block sm:block fixed z-20 bottom-12 lg:text-lg lg:font-semibold text-textBlack right-6 lg:right-12 `}
         >
             <div className="tel flex items-center">
