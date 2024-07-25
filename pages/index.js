@@ -16,6 +16,7 @@ import Icon3 from "../assets/icon3.png";
 import About from "../assets/about.png";
 import BottomBG from "../assets/bottomBG.jpg";
 import Favicon from "../public/favicon.svg";
+import client from "../client";
 
 import client from "../client";
 
@@ -56,6 +57,7 @@ export default function Home({ dataStart }) {
     useEffect(() => {
         console.log(dataStart);
 
+        console.log(dataStart.clientList);
         setTimeout(() => {
             console.log(isMobile, isTablet, isDesktop);
             setLetsGo(true);
